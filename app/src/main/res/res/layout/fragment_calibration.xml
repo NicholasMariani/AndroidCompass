@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/cal_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Calibration Information"
+        android:textColor="#ffffff"
+        android:textSize="24dp" />
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        android:layout_below="@id/cal_header"/>
+
+    <TextView
+        android:id="@+id/cal_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp"
+        android:text="Well calibrated."
+        android:layout_below="@id/topDivider"/>
+
+    <ImageView
+        android:id="@+id/statusDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/dotted_line"
+        android:layout_below="@id/cal_status"/>
+
+    <TextView
+        android:id="@+id/coord_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Sensors"
+        android:textSize="16dp"
+        android:textColor="@color/dark_grey"
+        android:layout_below="@id/statusDivider"/>
+
+    <View
+        android:id="@+id/coord_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark_grey"
+        android:layout_below="@id/coord_header"/>
+
+    <RelativeLayout
+        android:id="@+id/acc_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/coord_divider">
+
+        <TextView
+            android:id="@+id/accel_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Accelerometer"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:layout_below="@id/coord_divider"/>
+
+        <TextView
+            android:id="@+id/accel_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="acc"
+            android:textSize="14dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/prog"
+            android:layout_below="@id/coord_divider"/>
+
+        <TextView
+            android:id="@+id/mag_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:text="Magnetic Field"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:layout_below="@id/accel_header"/>
+
+        <TextView
+            android:id="@+id/mag_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="acc"
+            android:textSize="14dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toLeftOf="@id/prog"
+            android:layout_below="@id/accel_header"/>
+
+        <ProgressBar
+            android:id="@+id/prog"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:max="200"
+            android:maxHeight="40dp"
+            android:minWidth="120dp"
+            android:minHeight="40dp"
+            android:maxWidth="120dp"
+            android:progressBackgroundTint="#00FF00"
+            android:progressTint="#00FF00" />
+
+        <TextView
+            android:id="@+id/mf_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Magnetic Field: "
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:layout_below="@id/prog"/>
+
+        <TextView
+            android:id="@+id/mf_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="mf"
+            android:textSize="14dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/prog"
+            android:layout_below="@id/prog"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/cal_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/acc_rel">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="Calibrate your device by moving it in 3 direction as shown below. or by moving it in 8 pattern shape." />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:src="@drawable/cali_image_2" />
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="And Keep device away from magnetic things. If sensor accuracy is still low, you did the calibration wrong or Maybe there is a problem with your device sensors." />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

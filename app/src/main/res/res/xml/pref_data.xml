@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="speed"
+        android:title="Speed Units"
+        android:summary="Choose Speed Unit System"
+        android:defaultValue="Metric"
+        android:entries="@array/speed_units_entries"
+        android:entryValues="@array/speed_units_values"/>
+
+    <ListPreference
+        android:key="coords"
+        android:title="Coordinate Units"
+        android:summary="Choose Coordinate Unit System"
+        android:defaultValue="Degrees"
+        android:entries="@array/coord_units_entries"
+        android:entryValues="@array/coord_units_values"/>
+
+</PreferenceScreen>

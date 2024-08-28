@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="updateInterval">
+        <item name="1000">Every 1 second</item>
+        <item name="5000">Every 5 seconds</item>
+        <item name="30000">Every 30 seconds</item>
+        <item name="60000">Every 1 minute</item>
+    </string-array>
+
+    <string-array name="updateIntervalValues">
+        <item name="1000">1000</item>
+        <item name="5000">5000</item>
+        <item name="30000">30000</item>
+        <item name="60000">60000</item>
+    </string-array>
+
+    <!-- Speed Units Preference -->
+    <string-array name="speed_units_entries">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </string-array>
+
+    <string-array name="speed_units_values">
+        <item>metric</item>
+        <item>imperial</item>
+    </string-array>
+
+    <!-- Coord Units Preference -->
+    <string-array name="coord_units_entries">
+        <item>Degrees</item>
+        <item>Decimal</item>
+    </string-array>
+
+    <string-array name="coord_units_values">
+        <item>degrees</item>
+        <item>decimal</item>
+    </string-array>
+
+</resources>
